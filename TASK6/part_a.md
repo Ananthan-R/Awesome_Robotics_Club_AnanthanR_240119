@@ -1,4 +1,6 @@
 # Design of the Bot
+## Block Diagram:
+![]()
 ## Control:
 The robot will use a microcontroller (Arduino or Raspberry Pi) to control the components.
 The components required are given below:
