@@ -25,11 +25,11 @@ def inverse_kinematics(x, y, z):
     r2 = sqrt(r1**2+ z**2)
 
     #beta can be found by using rule of cosines in triangle
-    # L3^2 = r2^2 +L2^2 +2 x L2 x r2 x cos(beta)
-    beta = acos((L3**2 - r2**2 - L2**2)/(2 * L2 *r2))
+    # L3^2 = r2^2 +L2^2 -2 x L2 x r2 x cos(beta)
+    beta = acos((r2**2 + L2**2 - L3**2)/(2 * L2 *r2))
     
     #finding angle E6 by using cosine rule
-    E6 = acos((L2**2 - r2**2 - L3**2)/(2 * L3 *r2))
+    E6 = acos((r2**2 + L3**2 - L2**2)/(2 * L3 *r2))
     if(E6<0):
         E6*=-1
 
