@@ -17,11 +17,11 @@ The coordinate axes are taken as follows:
 tan(alpha) = x/y
 -In order to find the angle beta, we first need to find the distances r1 and r2(see figure)
 -Then, using cosine rule, we can directly find the angle beta
-L3^2 = r2^2 +L2^2 +2 x L2 x r2 x cos(beta)
-=> beta = cos^-1 ((L3^2 - r2^2 - L2^2)/(2 x L2 xr2))
+L3^2 = r2^2 +L2^2 - 2 x L2 x r2 x cos(beta)
+=> beta = cos^-1 ((r2^2 + L2^2 - L3^2)/(2 x L2 xr2))
 - Then we need to find the angle E6 to find the angle gamma. We use cosine rule again to find E6
-L2^2 = r2^2 + L3^2 + 2 x L3 x r2
-=>E6 = cos^-1 ((L2^2 - r2^2 - L3^2)/(2 x L3 xr2))
+L2^2 = r2^2 + L3^2 - 2 x L3 x r2
+=>E6 = cos^-1 ((r2^2 + L3^2 -L2^2)/(2 x L3 xr2))
 - We find E5, and gamma by using angle sum property of triangle. Then, we convert alpha, beta and gamma into degrees, round them to two decimal places and return them after making a list of the angles.
 
 ### The function test_inverse_kinematics()
