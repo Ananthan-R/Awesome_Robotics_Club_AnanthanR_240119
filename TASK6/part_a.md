@@ -1,6 +1,6 @@
 # Design of the Bot
 ## Block Diagram:
-![](Awesome_Robotics_Club_AnanthanR_240119/TASK6/Block diagram.png)
+![](https://github.com/Ananthan-R/Awesome_Robotics_Club_AnanthanR_240119/blob/main/TASK6/Block%20diagram.png?raw=true)
 ## Control:
 The robot will use a microcontroller (Arduino or Raspberry Pi) to control the components.
 The components required are given below:
