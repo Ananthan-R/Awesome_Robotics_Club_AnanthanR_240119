@@ -26,10 +26,10 @@ def inverse_kinematics(x, y, z):
 
     #beta can be found by using rule of cosines in triangle
     # L3^2 = r2^2 +L2^2 +2 x L2 x r2 x cos(beta)
-    beta = acos((L3**2 - r2**2 - L2**2)/(2 * L2 *r2))
+    beta = acos((r2**2 + L2**2 - L3**2)/(2 * L2 *r2))
     
     #finding angle E6 by using cosine rule
-    E6 = acos((L2**2 - r2**2 - L3**2)/(2 * L3 *r2))
+    E6 = acos((r2**2 + L3**2 - L2**2)/(2 * L3 *r2))
     if(E6<0):
         E6*=-1
 
@@ -39,7 +39,7 @@ def inverse_kinematics(x, y, z):
     #finding gamma
     gamma = pi - E5
 
-    angles=[round(alpha*180/pi,2) ,round(180-beta*180/pi,2) ,round(360-gamma*180/pi,2)]
+    angles=[round(alpha*180/pi,2) ,round(beta*180/pi,2) ,round(gamma*180/pi,2)]
     
     return angles
 
